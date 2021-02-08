@@ -11,12 +11,12 @@ export class Tasks {
 
     @Column()
     description: string;
-
+    
     @Column({
         default: false
     })
     finished: boolean;
-    
+
     @CreateDateColumn()
     created_at: Date;
 
