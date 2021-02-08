@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Table } from 'react-bootstrap';
+import { Badge, Button, Form, Table } from 'react-bootstrap';
 import api from '../../services/api';
 
 interface ITask {
@@ -49,7 +49,11 @@ const Tasks: React.FC = () => {
                     <td>{ task.title }</td>
                     <td>{ task.description }</td>
                     <td>{ task.created_at }</td>
-                    <td>{ task.finished }</td>
+                    <td> 
+                      <Badge variant={ task.finished ? "success" : "warning"}>
+                        { task.finished ? "Administrador/Gerente" : "Colaborador" }
+                      </Badge>
+                    </td>
                     <td>
                       <Button size="sm">Editar</Button>{' '}
                       <Button size="sm" variant="danger">Remover</Button>{' '}
