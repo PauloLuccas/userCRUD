@@ -8,11 +8,12 @@
       "typescript": "3.3.3333"
    },
    "dependencies": {
-      "typeorm": "0.2.30",
-      "reflect-metadata": "^0.1.10",
-      "pg": "^8.4.0",
+      "@types/express": "^4.17.11",
+      "body-parser": "^1.18.1",
       "express": "^4.15.4",
-      "body-parser": "^1.18.1"
+      "pg": "^8.4.0",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.2.30"
    },
    "scripts": {
       "start": "ts-node src/index.ts"
